@@ -30,6 +30,7 @@ const PostList: FC<PostListProps> = ({ setSelectedPost }) => {
       {posts &&
         posts.map((post: Post) => (
           <div
+            key={post.id}
             className="post-wrapper"
             onClick={() => setSelectedPost(post.id)}
           >

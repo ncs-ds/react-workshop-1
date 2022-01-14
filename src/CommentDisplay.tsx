@@ -31,7 +31,7 @@ const CommentDisplay: FC<CommentDisplayProps> = ({ postId }) => {
     <div className="comment-wrapper">
       {comments.map((comment) => {
         return (
-          <div className="comment">
+          <div key={comment.id} className="comment">
             <h3>{comment.body}</h3>
             <p>{comment.email}</p>
           </div>
